@@ -1,13 +1,23 @@
 <template>
   <form >
   <label for="email">Electronic Mail</label>
-  <input type="email" required placeholder="ironman@email.com">
+  <input type="email" required placeholder="ironman@email.com" v-model="email">
+
+  <label for="password">password</label>
+  <input type="password" required placeholder="password" v-model="password">
   </form>
+  <p>Email: {{ email }}</p>
+  <p>Password: {{ password }}</p>
 </template>
 
 <script>
 export default {
-
+    data() {
+        return {
+            email: '',
+            password: ''
+        }
+    }
 }
 </script>
 
@@ -37,6 +47,9 @@ input {
     box-sizing: border-box;
     border-bottom: #ddd;
     color: #555;
+}
+p {
+    color: yellowgreen;
 }
 
 </style>
